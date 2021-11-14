@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nep-vF-BG8">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nep-vF-BG8">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Tap Navigation Controller-->
         <scene sceneID="lfj-Kh-Td7">
             <objects>
-                <navigationController id="nep-vF-BG8" customClass="TapNavigationController" customModule="TapViewController" sceneMemberID="viewController">
+                <navigationController id="nep-vF-BG8" customClass="TapNavigationController" customModule="TapViewControllerV2" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ICE-tu-eqd">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -29,7 +26,7 @@
         <!--Countries List View Controller-->
         <scene sceneID="x82-R9-z2k">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" definesPresentationContext="YES" id="1v3-WC-BJ3" customClass="CountriesListViewController" customModule="TapCountriesKit_UI" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" definesPresentationContext="YES" id="1v3-WC-BJ3" customClass="CountriesListViewController" customModule="TapCountriesKit_UIV2" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yWe-gj-RNw"/>
                         <viewControllerLayoutGuide type="bottom" id="vtU-s0-nJM"/>
@@ -39,11 +36,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQ2-an-y8P">
-                                <rect key="frame" x="0.0" y="68" width="375" height="599"/>
+                                <rect key="frame" x="0.0" y="48" width="375" height="619"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CountryTableViewCell" id="kYU-Sv-Sh4" customClass="CountryTableViewCell" customModule="TapCountriesKit_UI">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kYU-Sv-Sh4" id="G5N-Kx-vdd">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -60,7 +57,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AE" translatesAutoresizingMaskIntoConstraints="NO" id="IoZ-VE-w12">
-                                                    <rect key="frame" x="61" y="10" width="23" height="23"/>
+                                                    <rect key="frame" x="61" y="10.5" width="23" height="23"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="23" id="cCx-Vi-tUZ"/>
@@ -111,18 +108,18 @@
                                     <outlet property="delegate" destination="1v3-WC-BJ3" id="fTi-hm-NaZ"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bKX-kp-y13" customClass="TapSearchView" customModule="TapSearchView">
-                                <rect key="frame" x="0.0" y="64" width="375" height="46"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bKX-kp-y13" customClass="TapSearchView" customModule="TapSearchViewV2">
+                                <rect key="frame" x="0.0" y="44" width="375" height="46"/>
                                 <color key="backgroundColor" red="0.96470588235294119" green="0.96862745098039216" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="jHl-Gx-PGB"/>
                                 </constraints>
                             </view>
-                            <view alpha="0.0" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rz9-sD-oNE" customClass="TapVisualEffectView" customModule="TapVisualEffectView">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            <view alpha="0.0" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rz9-sD-oNE" customClass="TapVisualEffectView" customModule="TapVisualEffectViewV2">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <subviews>
-                                    <glkView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enableSetNeedsDisplay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLF-8Y-dVA" customClass="TapActivityIndicatorView" customModule="TapGLKit">
-                                        <rect key="frame" x="152" y="266.5" width="70" height="70"/>
+                                    <glkView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enableSetNeedsDisplay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLF-8Y-dVA" customClass="TapActivityIndicatorView" customModule="TapGLKitV2">
+                                        <rect key="frame" x="152.5" y="276.5" width="70" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="C59-Pn-HCq"/>
                                             <constraint firstAttribute="width" secondItem="NLF-8Y-dVA" secondAttribute="height" multiplier="1:1" id="Dao-ea-tlD"/>
